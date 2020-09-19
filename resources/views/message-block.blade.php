@@ -14,7 +14,7 @@
                 <div class="col-md-4 col-md-offset-6 succes" >
                     {{Session::get('message')}}
                 </div>
-            </div>
+        </div>
 
     @endif
 

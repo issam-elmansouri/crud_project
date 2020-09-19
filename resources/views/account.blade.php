@@ -5,12 +5,32 @@
 @endsection
 
 @section('content')
-<section class="row new-post">
+
+@if(Auth::check())
+<div class="info">
+    <ul class='fayn_akhay_info'>
+                    <li>Name of user:  {{ Auth::user()->name}}</li>
+                    <li>Email of user: {{ Auth::user()->email}}</li>
+                    <li>created at: {{Auth::user()->created_at}}</li>
+    </ul></div>   
+@endif
+
+
+
+
+
+
+
+
+
+
+
+{{-- <section class="row new-post">
     <div class="col-md-6 col-md-offset-3">
         <header><h3>Your Account</h3></header>
         <form action="{{ route('account.save') }}" method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="first_name">First Name</label>
+                <label for="first_name">New Name</label>
                 <input type="text" name="first_name" class="form-control" value="{{ $user->first_name }}" id="first_name">
             </div>
             <div class="form-group">
@@ -28,8 +48,8 @@
     <div class="col-md-6 col-md-offset-3">
         <img src="{{ route('account.image', ['filename' => $user->first_name . '-' . $user->id . '.jpg']) }}" alt="" class="img-responsive">
     </div>
-</section>
-@endif
+</section> --}}
+
 
 
     

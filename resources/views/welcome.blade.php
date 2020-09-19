@@ -20,7 +20,7 @@
                     <label for="name">Your name</label>
                     <input class = "form-control" type="text" name="name" id= 'name'>
                 </div>
-                <button type="submit" class="btn btn-primary">sign in</button>
+                <button type="submit" class="btn btn-primary">sign up</button>
                 <input type="hidden" name="_token" value="{{Session::token()}}">
             </form>
         </div>
@@ -34,7 +34,7 @@
                     <label for="password">Your password</label>
                     <input class = "form-control" type="password" name="password" id= 'password'>
                 </div>
-                <button type="submit" class="btn btn-primary">sing up</button>
+                <button type="submit" class="btn btn-primary">sing in</button>
                 <input type="hidden" name="_token" value="{{Session::token()}}">
             </form>
         </div>

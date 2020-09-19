@@ -7,10 +7,14 @@
     
 </head>
 <body>
+    @if (Auth::check())
     @include('header')
+    @else 
+    @include('header1')
+    @endif
+    
     <div class="container">
         @yield('content')
-        
     </div>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>

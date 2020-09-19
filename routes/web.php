@@ -36,7 +36,7 @@ Route::group(['middleware' => ['web']], function(){
 
     Route::post('/signin', [
         'uses' =>'UserController@postSingIn',
-        'as' => 'signin'
+        'as' => 'signin' 
     ]);
 
     Route::post('/createpost', [
@@ -56,15 +56,18 @@ Route::group(['middleware' => ['web']], function(){
 
     Route::post('/edit', [
         'uses' => 'PostController@postEditPost',
-        'as' => 'edit'
+        'as' => 'edit',
+        'middleware' => 'auth'
     ]);
     Route::get('/account', [
         'uses' => 'UserController@getAccount',
-        'as' => 'account'
+        'as' => 'account',
+        'middleware' => 'auth'
     ]);
 
-    Route::post('/updateaccount', [
-        'uses' => 'UserController@postSaveAccount',
-        'as' => 'account.save'
-    ]);
+    // Route::post('/updateaccount', [
+    //     'uses' => 'UserController@postSaveAccount',
+    //     'as' => 'account.save',
+    //     'middleware' => 'auth'
+    // ]);
 });
