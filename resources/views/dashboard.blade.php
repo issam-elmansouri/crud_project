@@ -29,8 +29,8 @@
 
                 </div>
                 <div class="interaction">
-                    <a href="">Like</a> |
-                    <a href="">dislike</a> 
+                    <!--<a href="">Like</a> |
+                    <a href="">dislike</a> -->
                     @if(Auth::user() == $post->user)
                     |
                     <a href="" class="edit">edit</a> |

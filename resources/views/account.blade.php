@@ -8,11 +8,13 @@
 
 @if(Auth::check())
 <div class="info">
-    <ul class='fayn_akhay_info'>
+    <ul class='info_class'>
                     <li>Name of user:  {{ Auth::user()->name}}</li>
                     <li>Email of user: {{ Auth::user()->email}}</li>
-                    <li>created at: {{Auth::user()->created_at}}</li>
-    </ul></div>   
+                    <li>created at:    {{Auth::user()->created_at}}</li>
+
+    </ul>
+</div>   
 @endif
 
 
